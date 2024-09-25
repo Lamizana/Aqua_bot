@@ -1,6 +1,7 @@
 # Aqua-bot
 
 -------------------------------------------------------------------------------
+## Introduction
 
 Développer et implémenter un système de mission dans un drone de surface (USV) virtuel au sein d’un environnement de développement et de simulation mis à disposition par les organisateurs.
 
@@ -14,7 +15,6 @@ Les compétences minimums requises pour cette mission sont : **C++, Python, ROS2
 
 -------------------------------------------------------------------------------
 
-## Introduction
 
 ### Design Thinking
 
@@ -43,6 +43,10 @@ Et enfin, les *5 grandes étapes* de cette méthodologie :
 Le Design Thinking est une ***méthode Itérative*** ! 
 
 > Revenir en arrière pour ajuster le projet n'est pas un problème, c'est même bien souvent nécessaire.
+
+-------------------------------------------------------------------------------
+
+## Comprendre les enjeux de l'observation
 
 ### Importance de la phase d'observation
 
