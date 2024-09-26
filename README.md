@@ -2,6 +2,8 @@
 
 > By alex LAMIZANA, Mathys VITIELLO, Nathan TRIJAUD
 -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+
 ## Introduction
 
 Développer et implémenter un système de mission dans un drone de surface (USV) virtuel au sein d’un environnement de développement et de simulation mis à disposition par les organisateurs.
@@ -16,6 +18,8 @@ Les compétences minimums requises pour cette mission sont : **C++, Python, ROS2
 
 https://www.sirehna-challengeaquabot.com/program/challenge-aquabot-2
 
+-------------------------------------------------------------------------------
+
 ### Objectifs
 
 L’automatisation complète de l’USV est demandée aux participants.
@@ -28,6 +32,7 @@ Dans le cadre de la maintenance du parc éolien, ***le drone doit réaliser troi
 
 - Stabilisation & Maintenance devant l’éolienne défaillante
 
+-------------------------------------------------------------------------------
 
 ### Deroulement du Challenge
 
@@ -47,6 +52,8 @@ Le challenge se déroulera en 4 phases :
 - **Pitch** (2 semaines) :
     - Mise en forme du dossier final et préparation à la présentation orale.
 
+-------------------------------------------------------------------------------
+
 ### Livrable de mi-parcours
 
 Merci de ***télécharger votre livrable de mi-parcours d'ici le 18 octobre 2024 23h***.
@@ -59,6 +66,7 @@ Voici la structure attendue (3/4 slides) :
     
 - 1 slide présentant vos objectifs et vos attentes (formation, intervenants,..) pour la suite du programme. 
 
+-------------------------------------------------------------------------------
 
 ### Description de l’environnement de simulation
 
@@ -69,6 +77,8 @@ Cet environnement se charge de simuler l’environnement marin (mer, bateaux, ho
 > [!IMPORTANT]
 > L’USV mis à votre disposition est un monocoque de 6 mètres de long avec deux propulseurs azimutaux. Il aura une vitesse maximale de 12 nœuds.
 
+-------------------------------------------------------------------------------
+
 ### Environnement
 
 L’environnement marin dans lequel évolue les bateaux est soumis à une faible houle, mais sans aucun courant ni vent.
@@ -76,6 +86,8 @@ L’environnement marin dans lequel évolue les bateaux est soumis à une faible
 La taille de la zone de jeu est définie par défaut autour du point d’apparition de votre USV, par un carré de taille de ***600 mètres x 600 mètres***.
 
 L'environnement maritime contient des obstacles statiques, tel que des éoliennes, des ilots ou encore des rochers.
+
+-------------------------------------------------------------------------------
 
 ### Les scénarios
 
@@ -98,6 +110,8 @@ Les éléments d’un scénario pouvant être amenés à changer automatiquement
 - Les vagues et le vent.
 
 Nous fixerons des valeurs maximales pour chaque élément au début de la compétition.
+
+-------------------------------------------------------------------------------
 
 ### Développements à réaliser
 
@@ -123,6 +137,8 @@ Les modules suivants devront être développés :
 - Un module de perception pour traiter les données capteur, détecter les éoliennes et lire les QR code.
 
 - Un module de guidage et contrôle de l’USV faisant les choix de route et envoyant les ordres de contrôle à la propulsion.
+
+-------------------------------------------------------------------------------
 
 ### Paramètres de notation
 
@@ -173,6 +189,7 @@ Celle-ci sera alors pondérée avec votre rapport et la performance de votre USV
 Les équipes victorieuses seront annoncées durant l’événement final.
 
 -------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 
 ## Observation
 
@@ -204,6 +221,9 @@ Le Design Thinking est une ***méthode Itérative*** !
 
 > Revenir en arrière pour ajuster le projet n'est pas un problème, c'est même bien souvent nécessaire.
 
+-------------------------------------------------------------------------------
+
+
 ### Importance de la phase d'observation
 
 Une étape primordiale dans le lancement ou l'accélération d'un projet pour connaître son marché et ses utilisateurs.
@@ -220,6 +240,7 @@ Le vocabulaire important :
 
 - ***Parties prenantes***: Personnes ou organisation, directes ou indirectes, qui entourent l'utilisateur.
 
+-------------------------------------------------------------------------------
 
 ### Identifier les parties prenantes 
 
@@ -237,6 +258,7 @@ Les 3 catégories de ce canva (canva Stakeholder map) :
 
 - **Parties prenantes indirectes**: les acteurs qui auront une influence indirecte sur lui.
 
+-------------------------------------------------------------------------------
 
 ### Analyser la problématique
 
@@ -295,6 +317,8 @@ Voici la liste des première questions à se poser sur notre problématique :
 > [!IMPORTANT]
 L’objectif de ces premières questions est d’ouvrir la problématique, et de commencer sa stratégie d'observation.
 
+-------------------------------------------------------------------------------
+
 ### Les termes importants
 
 Après avoir répondu aux premières questions sur la problématique, certains éléments vous paraissent clairs et d’autres totalement inconnus. Il est temps d’identifier les pistes de recherches qui permettront de : 
@@ -335,7 +359,7 @@ Mais, avant de commencer,il est nécessaire de connaître certains termes qui vo
 
 12. ***Pratique constatée*** : Ce sont les usages et comportements constatés des publics/usagers, lors de l’observation.
 
-
+-------------------------------------------------------------------------------
 
 ### Les limites planétaires 
 
@@ -372,6 +396,7 @@ Evidemment prendre en compte les besoins de la nature n'est pas une chose facile
 
 > Le droit à la nature, c'est donner une personnalité juridique aux fleuves, aux lacs et autres espaces naturels : c'est à dire que des fleuves, des montagnes, des forêts se voient progressivement reconnaître comme des personnes juridiques.
 
+-------------------------------------------------------------------------------
 
 ### Reproblématiser
 
@@ -427,6 +452,7 @@ Voici les différentes parties à remplir d'une fiche idée :
 
 - ***Obstacles*** : Pour finir : la transparence. Si des points vous semblent bloquants, n'hésitez pas à les mettre en avant, vous serez accompagnés et challengés dessus.
 
+-------------------------------------------------------------------------------
 
 ### La proposition de valeur
 
