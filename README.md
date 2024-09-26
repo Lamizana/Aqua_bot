@@ -1,5 +1,6 @@
 # Aqua-bot
 
+> By alex LAMIZANA, Mathys VITIELLO, Nathan TRIJAUD
 -------------------------------------------------------------------------------
 ## Introduction
 
@@ -13,8 +14,167 @@ L’environnement proposé permet d’assurer la répétabilité de vos essais e
 
 Les compétences minimums requises pour cette mission sont : **C++, Python, ROS2, Gazebo**
 
+https://www.sirehna-challengeaquabot.com/program/challenge-aquabot-2
+
+### Objectifs
+
+L’automatisation complète de l’USV est demandée aux participants.
+
+Dans le cadre de la maintenance du parc éolien, ***le drone doit réaliser trois tâches successives*** pour compléter la mission WINDWATCH :
+
+- Inspection du statut de chaque éolienne
+    
+- Identification de l’éolienne défaillante dans le champ
+
+- Stabilisation & Maintenance devant l’éolienne défaillante
+
+
+### Deroulement du Challenge
+
+Le challenge se déroulera en 4 phases :
+
+- **Observation** (1 semaine) :
+    - Installation et prise en main de l’environnement de simulation
+    - Se référer au manuel utilisateur fourni au lancement de la compétition.
+
+- **Idéation** (1 semaine) :
+    - Organisation des équipes et projets.
+    - Adoptez une approche agile en divisant l'objectif en sous-objectifs.
+
+- **Prototypage** (8 semaines) :
+    - Développement et mise en œuvre de l’USV et de son système de mission en suivant une approche collaborative et participative.
+    
+- **Pitch** (2 semaines) :
+    - Mise en forme du dossier final et préparation à la présentation orale.
+
+### Livrable de mi-parcours
+
+Merci de ***télécharger votre livrable de mi-parcours d'ici le 18 octobre 2024 23h***.
+
+Voici la structure attendue (3/4 slides) : 
+
+- 1 slide qui présente votre équipe et votre organisation au quotidien (fréquences de vos réunions, présentiel/distanciel,...) ;
+    
+- 1 à 2 slides sur vos avancées aujourd’hui (matériel et logiciels utilisés, état d'avancement de votre prototype) ;
+    
+- 1 slide présentant vos objectifs et vos attentes (formation, intervenants,..) pour la suite du programme. 
+
+
+### Description de l’environnement de simulation
+
+L’environnement de développement de simulation **Gazebo ainsi que le framework de robotique ROS2 sont imposés**. Il sera mis à la disposition de chaque équipe inscrite un manuel utilisateur comprenant le guide d’installation de l’environnement ainsi que le guide de prise en main de ces outils.
+
+Cet environnement se charge de simuler l’environnement marin (mer, bateaux, houle …), ainsi que le comportement de votre USV et de ses capteurs. Il met également à disposition des scénarios d’entrainement qui permettent aux équipes d’évaluer la performance de leurs algorithmes avec les mêmes critères que ceux qui seront utilisés pour le classement des équipes.
+
+> [!IMPORTANT]
+> L’USV mis à votre disposition est un monocoque de 6 mètres de long avec deux propulseurs azimutaux. Il aura une vitesse maximale de 12 nœuds.
+
+### Environnement
+
+L’environnement marin dans lequel évolue les bateaux est soumis à une faible houle, mais sans aucun courant ni vent.
+
+La taille de la zone de jeu est définie par défaut autour du point d’apparition de votre USV, par un carré de taille de ***600 mètres x 600 mètres***.
+
+L'environnement maritime contient des obstacles statiques, tel que des éoliennes, des ilots ou encore des rochers.
+
+### Les scénarios
+
+Vos algorithmes seront évalués sur des scénarios différents, allant d’un niveau facile jusqu’à difficile. Nous mettons à votre disposition pour vous aider durant la compétition un certain nombre de scénarios de façon à faciliter votre autoévaluation.
+
+> Les équipes seront libres d’ajouter des scénarios complémentaires pour leur entrainement.
+
+**Chaque scénario durera 20 minutes durant lesquels il faudra compléter les 3 étapes, ainsi que potentiellement l’étape BONUS**.
+
+Les éléments d’un scénario pouvant être amenés à changer automatiquement sont :
+
+- La position des éoliennes.
+
+- Le statut des éoliennes.
+
+- L’orientation du QR code d’identification.
+
+- L’éolienne sur laquelle effectuer la maintenance,
+
+- Les vagues et le vent.
+
+Nous fixerons des valeurs maximales pour chaque élément au début de la compétition.
+
+### Développements à réaliser
+
+> [!IMPORTANT]
+> L’automatisation complète de votre USV est demandée.
+
+3 étapes clés seront à réaliser pour compléter la ***mission WINDWATCH*** :
+
+- **Étape 1** : *Inspection du statut de chaque éolienne* :
+    Il devra naviguer au sein de l’environnement en évitant les collision pour aller identifier chacune des éoliennes en scannant leur QR code et en renvoyant leurs données à la plateforme.
+
+- **Étape 2** : *Identification de l’éolienne défaillante dans le champ* :
+    - Un ping de la plateforme leur sera envoyé avec l’identification de l’éolienne sur laquelle l’équipage doit intervenir, votre USV devra donc retrouver l’éolienne correspondant à la demande de la plateforme et la rallier.
+
+- **Étape 3** : *Stabilisation & Maintenance devant l’éolien défaillante* :
+    - Maintenir la position de l’USV devant l’éolienne pour la bonne conduite de la maintenance.
+
+- **Étape Bonus** : *Round trip* :
+    - Effectuer 2 tours complet de l’éolienne en conservant un cap précis afin de s’assurer du bon état de celle-ci.
+
+Les modules suivants devront être développés :
+
+- Un module de perception pour traiter les données capteur, détecter les éoliennes et lire les QR code.
+
+- Un module de guidage et contrôle de l’USV faisant les choix de route et envoyant les ordres de contrôle à la propulsion.
+
+### Paramètres de notation
+
+Chaque équipe devra fournir avant la date spécifiée :
+
+- Le **code source** des modules développés compatibles avec l’environnement de simulation fournit.
+
+- **Un rapport** précisant :
+    - L’organisation de l’équipe mise en place dans le cas d’un développement collectif.
+    - Une description des algorithmes mis en place.
+    - Une notice d’installation (préciser le cas échéant la méthode d’installation de librairies complémentaires par exemple).
+    - Les difficultés rencontrées et leur résolution si résolus.
+
+> [!IMPORTANT]
+> Chaque équipe recevra une note qui sera la somme d’une évaluation sur le rapport, d’une évaluation sur la performance et d’une évaluation sur leur pitch de présentation durant la finale.
+
+- Il sera également demandé à l’issue de la phase d’IDEATION une présentation des équipes et projets.
+
+#### Evaluation du rapport et de la qualité de codage :
+
+- Qualité générale du rapport : observation et design thinking, gestion de projet et roadmap.
+    
+- Niveau technique des solutions proposées, et clarté de la description.
+    
+- Qualité générale du code livré.
+
+- 15 pages maximum.
+
+> [!WARNING]
+> Une pénalité par jour de retard (date de réception, quelle que soit l’heure) sur la livraison du code source et/ou du rapport sera comptabilisée.
+
+#### Evaluation de la performance selon des critères spécifique et écart type :
+
+**Toute collision entrainera la fin du scénario**. Les points accumulés avant la collision resteront comptabilisé
+
+Seront comptabilisés comme collision : La collision avec un obstacle fixe (rochers, phare, éolienne...).
+
+Une inspection du code livré sera réalisée pour identifier toute tentative de triche. En cas de doute sur ce qui autorisé ou non, contacter l’équipe organisatrice.
+
+#### Evaluation du pitch :
+
+Une finale réunissant l’ensemble des participants sera organisée dans les locaux de Sirehna, au Technocampus Océan, 5 rue de l’Halbrane, **44340 BOUGUENAIS, France**.
+
+Durant la finale, votre équipe devra ***présenter ses travaux pendant un pitch de courte durée (entre 5 et 7 minutes) devant un jury***, à l’aide d’un support visuel composé d’un ***maximum de 10 slides*** pour votre pitch-deck*. A l’issu des présentations, une note vous sera attribuée.
+
+Celle-ci sera alors pondérée avec votre rapport et la performance de votre USV durant les tests.
+
+Les équipes victorieuses seront annoncées durant l’événement final.
+
 -------------------------------------------------------------------------------
 
+## Observation
 
 ### Design Thinking
 
@@ -43,10 +203,6 @@ Et enfin, les *5 grandes étapes* de cette méthodologie :
 Le Design Thinking est une ***méthode Itérative*** ! 
 
 > Revenir en arrière pour ajuster le projet n'est pas un problème, c'est même bien souvent nécessaire.
-
--------------------------------------------------------------------------------
-
-## Comprendre les enjeux de l'observation
 
 ### Importance de la phase d'observation
 
@@ -178,4 +334,133 @@ Mais, avant de commencer,il est nécessaire de connaître certains termes qui vo
      
 
 12. ***Pratique constatée*** : Ce sont les usages et comportements constatés des publics/usagers, lors de l’observation.
+
+
+
+### Les limites planétaires 
+
+Comme le corps à ses limites, la planète aussi.
+
+Il s'agit d'un outil de mesure scientifique qui permet d'améliorer l’information sur les risques de changements environnementaux. Des changements environnementaux qui résultent des activités humaines susceptibles d’affecter les écosystèmes et le bien-être de manière générale.
+
+> [!IMPORTANT]
+> Ce concept des limites planétaires définit un espaace de développement sûr et juste pour l'humanité.
+
+Actuellement, il est fondé sur ***9 processus biophysiques*** qui, ensemble, régulent la stabilité de la planète :
+
+- le changement climatique
+- l’érosion de la biodiversité
+- la perturbation des cycles biogéochimiques de l’azote et du phosphore
+- les changements d’utilisation et l'usage des sols
+- l’acidification des océans
+- l’utilisation mondiale de l’eau douce
+- l’appauvrissement de l’ozone stratosphérique
+- l’augmentation des aérosols dans l’atmosphère
+- l’introduction d’entités nouvelles dans la biosphère.
+
+Ce sont des seuils quantitatifs à ne pas dépasser sont définis pour chacun d'entre eux sous peine de perdre la stabilité du système et donc l'hospitalité de la Terre.
+
+**Pourquoi les avoir en tête tout au long du CPi ?**
+
+Même si elle sont encore le sujet de recherches par les scientifiques et les limites planétaire ***sont un parfait rappel que les enjeux environnementaux ne concernent pas seulement le climat et le CO2***. 
+
+Gardez les en tête quand vous abordez les enjeux environnementaux de votre projet et ne réfléchissez pas seulement en terme d'émission carbone (même si c'est déjà un bon début 🙂).
+
+**S'inspirer du droit à la nature pour changer notre vision du monde**
+
+Evidemment prendre en compte les besoins de la nature n'est pas une chose facile, faut-il encore "rentrer en empathie" avec elle. Afin de mieux, cerner les enjeux environnementaux de votre problématique et de mettre les besoins de la planète au même niveau que celui des êtres humains. Je te propose un petit jeux à mettre en place tout au long du CPI, inspiré directement du droit à la nature : 
+
+> Le droit à la nature, c'est donner une personnalité juridique aux fleuves, aux lacs et autres espaces naturels : c'est à dire que des fleuves, des montagnes, des forêts se voient progressivement reconnaître comme des personnes juridiques.
+
+
+### Reproblématiser
+
+Bienvenue dans cette capsule sur la reproblématisation. Nous verrons ce à quoi sert une problématique et intégrerons les notions de nuance de problématique.
+
+Vous avez vu, dans un précédent module, comment analyser une problématique. Grâce aux premières recherches que vous avez réalisées, vous êtes désormais capable de la préciser et la transformer en une problématique d’innovation.
+
+En suivant la méthodologie du Design Thinking, une problématique de projet d’innovation fait apparaître trois éléments :
+
+- ***L'action*** : "Quoi"
+- ***L'utilisateur*** : "Qui"
+- ***Le bénéfice de la résolution du problème***: "Pour quoi"
+
+Nous arrivons donc à des question de types : 
+
+- Comment pourrions-nous  pour afin de ?
+- Comment pourrions-nous aider , à afin de ?
+
+Exemple concret : 
+
+- Comment pourrions nous ***simplifier la réservation de voyage de vacances*** pour ***les étudiants*** dans le supérieur afin de leur ***permettre d’organiser des voyages facilement avec leurs amis*** ?
+
+Cette formulation permet de mettre à plat et de toujours garder en tête l’objectif, *l’enjeu* et *la cible* à qui *s’adresse le projet*. Vous remarquerez que chaque élément est décrit de manière claire. Il faut trouver le juste milieu entre simplicité et exhaustivité dans la formulation pour que la problématique soit précise tout en restant simple à comprendre. Elle évoluera au fur et à mesure de vos observations afin de définir le plus précisément possible le besoin de votre utilisateur. 
+
+Cette problématique vous suivra tout au long du projet. La finalité des phases d’observation et de définition des besoins est d’arriver à définir les différents éléments qui se concrétisent en une problématique qui prend en compte les enseignements clés récoltés. 
+
+Maintenant c’est à vous de reformuler le problème qui vous a été posé en prenant en compte les premières recherches que vous avez réalisées de manière à ce qu’elle prenne la forme d’une problématique d’innovation !
+
 -------------------------------------------------------------------------------
+
+## Idéation
+
+### La fiche idée
+
+A l’issue de la phase d’idéation, il est important de développer plusieurs concepts pour tester différentes propositions de valeur, prioriser les fonctionnalités à intégrer dans un prototype et affiner la solution qui saura répondre aux besoins utilisateurs.
+
+La fiche idée permet de formaliser les concepts ayant vu le jour durant la phase de créativité afin de faciliter les choix lors de l’étape suivante. 
+
+Elle permet d’expliciter la solution envisagée, les problèmes adressés, les raisons d’y croire ainsi que les premières fonctionnalités ou caractéristiques imaginées. 
+
+Il est important de donner un nom à chaque fiche idée par souci de lisibilité mais aussi pour projeter les valeurs portées par le concept. Dessiner la solution vous permet de réfléchir à un premier prototype.
+
+Voici les différentes parties à remplir d'une fiche idée : 
+
+- ***Nom de la solution*** : Ici, rien de plus que le nom de votre produit/service. Pas de panique, il pourra changer au cours de votre avancée !
+    Problèmes adressés : Dans cette seconde case, explicités sous formes de tirets tous les problèmes de vos utilisateurs que vous souhaitez résoudre grâce à votre solution.
+    
+- ***Détails de la solution*** : Ensuite, détaillez la solution : quelle forme prend-elle ?, comment s'utilise-t-elle ?, comment vous ferez en sorte que vos utilisateurs l'utiliserons et la garderons ?... 
+    
+- ***Raisons d'y croire*** : Rédigez cette partie comme si vous vendiez la solution à un investisseur : des mots précis qui donneront envie de vous suivre car on croit en votre projet.
+    
+- ***Dessin de la piste d'innovation*** : "1 image vaut 1000 mots" : dessinez, tant bien que mal, un aperçu de l'idée que vous vous faites de la solution : c'est important pour faire passer des idées.
+
+- ***Obstacles*** : Pour finir : la transparence. Si des points vous semblent bloquants, n'hésitez pas à les mettre en avant, vous serez accompagnés et challengés dessus.
+
+
+### La proposition de valeur
+
+Une proposition de valeur efficace peut se résumer en une phrase. 
+
+Celle-ci doit contenir : 
+- Le nom du concept ou du projet.
+- Le type de solution proposée.
+- La cible d’utilisateurs.
+- Leur problème.
+- La fonction clef du projet.
+- Comment celui-ci permet de répondre au problème des utilisateurs. 
+
+Une fois clairement définie, **cette proposition de valeur sera le fil rouge du développement du produit**. Elle peut également être très utile pour tester la désirabilité du concept ou du projet, notamment  à travers des tests utilisateurs, et se prête bien aux méthodes digitales d’AB Testing. 
+
+Pour bien mettre au clair votre proposition de valeur, le canva qui lui est associé est très utile.
+
+> [!NOTE]
+> Ce canva se dessine sur deux grands axes : la proposition de valeur et le segment client.
+
+**Le premier axe** sert à visualiser la valeur créée par votre solution, on y trouvera 3 sous-catégories :
+
+- ***Produits et services*** : fonctionnalités du concept qui répondent au problème
+    
+- ***Problèmes résolus*** : les problèmes auxquels ces produits et services répondent
+    
+- ***Bénéfices créés*** : comment les produits et services maximisent la satisfaction des utilisateurs
+
+**Le second** sert à bien comprendre son utilisateur :
+
+- ***Aspiration client*** : ce que l’utilisateur veut réaliser (fonctionnel, social, émotionnel). 
+    
+- ***Bénéfices*** : ce que les utilisateurs espèrent tirer de la satisfaction de leur besoin
+
+- ***Problèmes*** : ce qui empêche l’utilisateur de satisfaire son besoin
+
+Bon courage pour mettre au clair votre proposition de valeur !
